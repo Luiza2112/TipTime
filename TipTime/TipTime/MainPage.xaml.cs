@@ -18,7 +18,7 @@
         {
             TipPercentageSlider.Value = 30;
         }
-
+        
         private void RoundDownButton_Clicked(object sender, EventArgs e)
         {
             //Arredondar o valor para o menor número inteiro próximo do valor.
