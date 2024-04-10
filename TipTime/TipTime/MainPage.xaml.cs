@@ -35,7 +35,16 @@
 
         private void RoundUpButton_Clicked(object sender, EventArgs e)
         {
+            //Arredondar o valor para o maior número inteiro próximo do valor.
 
+            double valorDaConta = Convert.ToDouble(ValueEntry.Text);
+            double porcentagemDaGorjeta = TipPercentageSlider.Value / 100;
+            double valorDaGorjeta = valorDaConta * porcentagemDaGorjeta;
+            valorDaGorjeta = Math.Ceiling(valorDaGorjeta);
+            double totalConta = valorDaGorjeta + valorDaConta;
+
+            TotalLabel.Text = totalConta.ToString();
+            TipLabel.Text = valorDaGorjeta.ToString();
         }
 
         private void OnTipPercentageSlider_ValueChanged(object sender, ValueChangedEventArgs e)
